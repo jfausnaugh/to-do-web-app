@@ -3,8 +3,8 @@ import functions
 
 
 def add_todo():
-    todo = st.session_state["new_todo"] + "\n"
-    todos.append(todo)
+    todo_item = st.session_state["new_todo"] + "\n"
+    todos.append(todo_item)
     functions.write_todos(todos)
     # When user hits enter, it calls the function and executes it
 
@@ -12,7 +12,7 @@ def add_todo():
 todos = functions.get_todos()
 
 st.title("My Todo App")
-st.subheader("This is my todo app.")
+st.subheader("This is a basic todo list web app")
 st.write("This app is to increase your productivity.")
 
 for index, todo in enumerate(todos):
