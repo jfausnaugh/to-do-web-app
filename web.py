@@ -8,6 +8,8 @@ def add_todo():
     :return:
     """
     todo_item = st.session_state["new_todo"] + "\n"
+    # clears textbox after user hits enter
+    st.session_state["new_todo"] = ""
     todos.append(todo_item)
     functions.write_todos(todos)
 
